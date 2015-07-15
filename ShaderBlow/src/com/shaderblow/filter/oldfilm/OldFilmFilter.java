@@ -169,8 +169,8 @@ public class OldFilmFilter extends Filter {
     }
 
     public void setColorDensity(final float colorDensity) {
+        this.colorDensity = colorDensity;
         if (this.material != null) {
-            this.colorDensity = colorDensity;
             this.material.setFloat(M_PARAM_NAME_COLOR_DENSITY, this.colorDensity);
         }
     }
@@ -180,8 +180,8 @@ public class OldFilmFilter extends Filter {
     }
 
     public void setFilterColor(final ColorRGBA filterColor) {
+        this.filterColor = filterColor;
         if (this.material != null) {
-            this.filterColor = filterColor;
             this.material.setColor(M_PARAM_NAME_FILTER_COLOR, this.filterColor);
         }
     }
@@ -191,8 +191,8 @@ public class OldFilmFilter extends Filter {
     }
 
     public void setNoiseDensity(final float noiseDensity) {
+        this.noiseDensity = noiseDensity;
         if (this.material != null) {
-            this.noiseDensity = noiseDensity;
             this.material.setFloat(M_PARAM_NAME_NOISE_DENSITY, this.noiseDensity);
         }
     }
@@ -202,8 +202,8 @@ public class OldFilmFilter extends Filter {
     }
 
     public void setScratchDensity(final float scratchDensity) {
+        this.scratchDensity = scratchDensity;
         if (this.material != null) {
-            this.scratchDensity = scratchDensity;
             this.material.setFloat(M_PARAM_NAME_SCRATCH_DENSITY, this.scratchDensity);
         }
     }
@@ -213,8 +213,8 @@ public class OldFilmFilter extends Filter {
     }
 
     public void setVignettingValue(float vignettingValue) {
+        this.vignettingValue = vignettingValue;
         if (this.material != null) {
-            this.vignettingValue = vignettingValue;
             this.material.setFloat(M_PARAM_NAME_INNER_VIGNETTING, this.vignettingValue
                     - DEFAULT_VIGNETTING_FADE_REGION_WIDTH);
             this.material.setFloat(M_PARAM_NAME_OUTER_VIGNETTING, this.vignettingValue);

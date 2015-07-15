@@ -116,8 +116,8 @@ public class ColorScaleFilter extends Filter {
     }
 
     public void setColorDensity(final float colorDensity) {
+        this.colorDensity = colorDensity;
         if (this.material != null) {
-            this.colorDensity = colorDensity;
             this.material.setFloat(M_PARAM_NAME_COLOR_DENSITY, this.colorDensity);
         }
     }
@@ -127,8 +127,8 @@ public class ColorScaleFilter extends Filter {
     }
 
     public void setFilterColor(final ColorRGBA filterColor) {
+        this.filterColor = filterColor;
         if (this.material != null) {
-            this.filterColor = filterColor;
             this.material.setColor(M_PARAM_NAME_FILTER_COLOR, this.filterColor);
         }
     }
@@ -138,8 +138,8 @@ public class ColorScaleFilter extends Filter {
     }
 
     public void setOverlay(boolean overlay) {
+        this.overlay = overlay;
         if (this.material != null) {
-            this.overlay = overlay;
             this.material.setBoolean(M_PARAM_NAME_OVERLAY, this.overlay);
         }
     }
@@ -149,8 +149,8 @@ public class ColorScaleFilter extends Filter {
     }
 
     public void setMultiply(boolean multiply) {
+        this.multiply = multiply;
         if (this.material != null) {
-            this.multiply = multiply;
             this.material.setBoolean(M_PARAM_NAME_MULTIPY, this.multiply);
         }
     }
