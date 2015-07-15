@@ -55,6 +55,14 @@ import com.jme3.renderer.ViewPort;
 public class ColorScaleFilter extends Filter {
 
     /**
+     * Material parameter's name constants
+     */
+    private static final String M_PARAM_NAME_FILTER_COLOR = "FilterColor";
+    private static final String M_PARAM_NAME_COLOR_DENSITY = "ColorDensity";
+    private static final String M_PARAM_NAME_OVERLAY = "Overlay";
+    private static final String M_PARAM_NAME_MULTIPY = "Multiply";
+
+    /**
      * Default values
      */
     private static final ColorRGBA DEAFULT_COLOR = ColorRGBA.Red.clone();
@@ -101,14 +109,16 @@ public class ColorScaleFilter extends Filter {
     protected void initFilter(final AssetManager manager, final RenderManager renderManager, final ViewPort vp,
             final int w, final int h) {
         this.material = new Material(manager, "ShaderBlow/MatDefs/Filters/ColorScale/ColorScale.j3md");
-        this.material.setColor("FilterColor", this.filterColor);
-        this.material.setFloat("ColorDensity", this.colorDensity);
+        this.material.setColor(M_PARAM_NAME_FILTER_COLOR, this.filterColor);
+        this.material.setFloat(M_PARAM_NAME_COLOR_DENSITY, this.colorDensity);
+        this.material.setBoolean(M_PARAM_NAME_OVERLAY, this.overlay);
+        this.material.setBoolean(M_PARAM_NAME_MULTIPY, this.multiply);
     }
 
     public void setColorDensity(final float colorDensity) {
         if (this.material != null) {
             this.colorDensity = colorDensity;
-            this.material.setFloat("ColorDensity", this.colorDensity);
+            this.material.setFloat(M_PARAM_NAME_COLOR_DENSITY, this.colorDensity);
         }
     }
 
@@ -119,7 +129,7 @@ public class ColorScaleFilter extends Filter {
     public void setFilterColor(final ColorRGBA filterColor) {
         if (this.material != null) {
             this.filterColor = filterColor;
-            this.material.setColor("FilterColor", this.filterColor);
+            this.material.setColor(M_PARAM_NAME_FILTER_COLOR, this.filterColor);
         }
     }
 
@@ -130,7 +140,7 @@ public class ColorScaleFilter extends Filter {
     public void setOverlay(boolean overlay) {
         if (this.material != null) {
             this.overlay = overlay;
-            this.material.setBoolean("Overlay", this.overlay);
+            this.material.setBoolean(M_PARAM_NAME_OVERLAY, this.overlay);
         }
     }
 
@@ -141,7 +151,7 @@ public class ColorScaleFilter extends Filter {
     public void setMultiply(boolean multiply) {
         if (this.material != null) {
             this.multiply = multiply;
-            this.material.setBoolean("Multiply", this.multiply);
+            this.material.setBoolean(M_PARAM_NAME_MULTIPY, this.multiply);
         }
     }
 
