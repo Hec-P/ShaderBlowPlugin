@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://www.netbeans.org/ns/project/1">
+    <type>org.netbeans.modules.apisupport.project</type>
+    <configuration>
+        <data xmlns="http://www.netbeans.org/ns/nb-module-project/3">
+            <code-name-base>com.shaderblow.plugin</code-name-base>
+            <suite-component/>
+            <module-dependencies>
+                <dependency>
+                    <code-name-base>com.jme3.gde.core.baselibs</code-name-base>
+                    <build-prerequisite/>
+                    <compile-dependency/>
+                    <run-dependency>
+                        <release-version>1</release-version>
+                        <specification-version>3.1.0</specification-version>
+                    </run-dependency>
+                </dependency>
+            </module-dependencies>
+            <public-packages>
+                <package>com.shaderblow.filter.basicssao</package>
+                <package>com.shaderblow.filter.circularfading</package>
+                <package>com.shaderblow.filter.colorscale</package>
+                <package>com.shaderblow.filter.frostedglass</package>
+                <package>com.shaderblow.filter.grayscale</package>
+                <package>com.shaderblow.filter.motionblur</package>
+                <package>com.shaderblow.filter.nightvision</package>
+                <package>com.shaderblow.filter.oldfilm</package>
+                <package>com.shaderblow.filter.pixelation</package>
+                <package>com.shaderblow.filter.predatorvision</package>
+                <package>com.shaderblow.filter.simplerefractionfilter</package>
+                <package>com.shaderblow.forceshield</package>
+                <package>com.shaderblow.lightblow</package>
+                <package>com.shaderblow.simplerefraction</package>
+                <package>com.shaderblow.skydome</package>
+            </public-packages>
+            <class-path-extension>
+                <runtime-relative-path>ext/ShaderBlow.jar</runtime-relative-path>
+                <binary-origin>release/modules/ext/ShaderBlow.jar</binary-origin>
+            </class-path-extension>
+        </data>
+    </configuration>
+</project>
